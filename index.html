@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ma visite 360</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css">
+  <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+</head>
+<body>
+  <div id="panorama" style="width:100%; height:500px;"></div>
+
+  <script>
+    pannellum.viewer('panorama', {
+      type: "equirectangular",
+      panorama: "https://pannellum.org/images/alma.jpg",
+      autoLoad: true,
+      hotSpots: [
+        {
+          pitch: 10,
+          yaw: 90,
+          type: "info",
+          text: "Mon premier point cliquable !"
+        }
+      ]
+    });
+  </script>
+</body>
+</html>
